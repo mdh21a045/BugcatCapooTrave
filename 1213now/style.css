@@ -1,0 +1,238 @@
+*{
+    padding: 0px;
+    margin: 0;
+}
+
+header{
+    background-color:hsla(194, 100%, 23%, 0.856) ;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+h1{
+    color:rgb(13, 12, 53);
+    position: absolute;
+    left: 120px;
+    top: 0px;
+    line-height: 80px;
+    background-image: url(image/咖波LOGO白字試試看.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    text-indent: -99999999px;
+}
+
+header ul{
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+
+header li{
+    display: inline;
+    margin-right: 4vw;
+}
+
+header a{
+    color:rgb(252, 252, 252);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: rgb(255, 251, 0);
+    text-decoration: underline;
+}
+
+.news{
+    background-color: antiquewhite;
+    color: rgb(255, 255, 255);
+    height: 85vh;
+    background-image: url(image/真的啦.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news h2{
+    font-size: 55px;
+    font-weight: bolder;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.news p{
+    color: rgb(255, 236, 130);
+    font-size:25px;
+    margin: 25px 0;
+    font-weight: 500;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.news a{
+    color: rgb(173, 255, 214);
+    text-decoration: none;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.標語{
+    background-color: rgb(210, 225, 252);
+    color: rgb(17, 59, 78);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    line-height: 2em;
+    font-weight: bolder;
+}
+
+.店內及活動{
+    display: flex;
+}
+
+.店內及活動 img{
+    width: 50%;
+}
+
+.info{
+    width: 50%;                                /*寬度*/
+    background-color: rgb(255, 251, 215);    /*背景色*/
+    display: flex;                             /*彈性盒子*/
+    flex-direction: column;                    /*彎曲*/
+    align-items: center;                       /*水中置中*/
+    justify-content: center;                   /*垂直置中*/
+}
+
+.info h2{
+    font-size: 40px;                           /*字體大小*/
+    font-family:Arial, Helvetica, sans-serif;  /*字體種類1,2,3*/
+    margin-bottom: 30px;                       /*在文字下方???pt*/
+    font-weight: 900;                          /*字體粗細*/
+}
+
+.info p{
+    align-items: center;                        /*水中置中*/
+    line-height: 2em;                           /*行距或行高*/
+    font-size: 18px;                            /*字體大小*/
+    font-family:Arial, Helvetica, sans-serif;   /*字體種類1,2,3*/
+    font-weight: bolder;                        /*字體粗細*/
+}
+
+.product{
+    display: flex;                          /*彈性盒子*/
+    background-color: rgb(224, 218, 255); /*背景色*/
+    justify-content: space-between;         /*水中置中*/
+    align-items: center;                    /*垂直置中*/
+    padding: 100px 150px 80px;              /*內邊距*/
+}
+
+.product div{
+    width: 300px;             /*寬度*/
+    text-align: center;       /*文字置中*/
+}
+
+.product img{
+    width: 100%;             /*寬度*/
+    border-radius: 30px;     /*圖片變成圓角矩形*/
+}
+
+.product h3{
+    font-size: 25px;                            /*字體大小*/
+    font-family:Arial, Helvetica, sans-serif;   /*字體種類1,2,3*/
+    font-weight: bolder;                        /*字體粗細*/
+    margin: 20px 0;                             /*外邊框*/
+}
+
+.product p{
+    font-size: 18px;                            /*字體大小*/
+    font-family:Arial, Helvetica, sans-serif;   /*字體種類1,2,3*/
+    line-height: 1.8em;                         /*行高*/
+}
+
+footer{
+    background-color:hsla(194, 100%, 23%, 0.856) ;
+    color: rgb(255, 255, 255);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.menu{
+    display: none;
+}
+
+/*響應式網頁*/
+@media screen and (max-width:770px){
+    header ul{
+        display: none;
+    }
+
+    header h1{
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    .news h2{
+        font-size: 25px;
+    }
+
+    .news p{
+        font-size: 15px;
+    }
+
+    .menu{
+        display: block;                   /*手機版本時成為區塊的元素出現於上面*/
+        background-color:transparent;     /*小三條背景色*/
+        color: yellow;                  /*小三條顏色*/
+        font-size: 35px;                  /*小三條大小間距*/               
+        position: absolute;               /*左邊間距*/
+        top: 15px;                        /*頂邊間距*/
+        left: 20px;                       /*左邊間距*/
+        border: none;                     /*小三條不要邊框*/
+        cursor: pointer;                  /*游標--手指*/
+    }
+
+    .店內及活動{
+        flex-direction: column;      /*彎曲*/
+    }
+
+    .店內及活動 img{
+        width: 100%;                 /*寬--尺寸*/       
+    }
+
+    .info{
+        width: 100%;                 /*寬--尺寸*/
+        padding: 40px 0;             /*內邊距*/
+    }
+
+    .info h2{
+        font-size: 30px;             /*字體大小:??px*/
+    }
+
+    .info p{
+        font-size: 15px;
+    }
+
+    .product{
+        flex-direction: column;
+        padding: 60px 0;
+    }
+
+    .product div{
+        margin-bottom: 50px;
+    }
+}
